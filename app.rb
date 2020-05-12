@@ -12,25 +12,15 @@ class App < Sinatra::Base
     "#{@result}"
   end
 
-  # get "/say/:number/:phrase" do
-  #   @string = ""
-  #   @number = params[:number].to_i
-  #   @phrase = params[:phrase]
-  #   @number.times do
-  #     @string += @the_phrase
-  #     @string += "\n"
-  #   end
-  #   "#{@string}"
-  # end
-    get "/say/:number/:phrase" do
-    @the_product = ""
+  get "/say/:number/:phrase" do
+    @string = ""
     @the_number = params[:number].to_i
     @the_phrase = params[:phrase]
     @the_number.times do
-      @the_product += @the_phrase
-      # @the_product += "\n"
+      @string += @the_phrase
+
     end
-    "#{@the_product}"
+    "#{@string}"
   end
 
   get "/say/:word1/:word2/:word3/:word4/:word5" do
